@@ -22,7 +22,7 @@ class JSON
 private:
 	std::map<std::string, std::any> map;
 	JSON(std::map<std::string, std::any> _map) : map(_map) {}
-	int count(std::string string, char target)
+	int count(std::string string, char target);
 
 public:
     /**
