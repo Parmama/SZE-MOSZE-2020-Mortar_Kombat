@@ -57,6 +57,13 @@ void checkString(std::string& s)
     }
 }
 
+int count(std::string string, char target)
+{
+    int num = 0;
+    for (char c : string) if (c == target) num++;
+    return num;
+}
+
 std::variant<std::string, std::list<std::variant<std::string>>, bool, nullptr_t, float > string2variant(std::string& s)
 {
 	if (s[0] == '"') //starts with '"' --> string
@@ -89,7 +96,7 @@ std::variant<std::string, std::list<std::variant<std::string>>, bool, nullptr_t,
 							throw std::runtime_error("15A: Unexpected character inside list!");
 						}	
 					}
-					if (std::count(word.begin(), word.end(), ',') != 1) //more than
+					if (count(word.begin(), word.end(), ',') != 1) //more than
 					{
 						throw std::runtime_error("16: Unexpected number of commas (not 1)!");
 					}
