@@ -9,6 +9,7 @@
 
 #include <map>
 #include <string>
+#include <iostream>
 #include <any>
 #include <fstream>
 #include <streambuf>
@@ -21,6 +22,8 @@ class JSON
 private:
 	std::map<std::string, std::any> map;
 	JSON(std::map<std::string, std::any> _map) : map(_map) {}
+	int count(std::string string, char target)
+
 public:
     /**
 	* @brief String or file parse.
