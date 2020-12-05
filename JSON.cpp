@@ -244,3 +244,4 @@ JSON JSON::parseFromFile(std::string fileName)
 {
 	return(JSON(JSON::parse(fileName, true)));
 }
+
